@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Upload Excel File</title>
+</head>
+<body>
+    <div class="banner1">
+        <a href="/" style="text-decoration: none; color: black;">
+            <h1>
+                Add from Excel 
+            </h1>
+        </a>
+    </div>
+    <div class="container">
+        <div class="smllbnr">
+            <h1>Add Candidates to database</h1>
+        </div>
+        <div class="inputFileButton">
+            <form action="/addExcelFile" method="POST" enctype="multipart/form-data">
+                <div id="inputFileBox">
+                    <input type="file" name="filesToJ"  required  hidden id="inputdata">
+                    <input type="button" value="" alt="Upload File" id="btndata">
+                    
+                </div>
+                <div id="spandata">
+                    <span id="cdata" style="color: red;">Oops! Invalid file format</span>
+                </div>
+                <div id="submitButton" >
+                    <input type="submit" value="Submit" id="btnS" style="display: block;">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        var cdata=document.getElementById('cdata');
+        var inputdata=document.getElementById('inputdata');
+        var btndata=document.getElementById('btndata');
+        var submitButton=document.getElementById('btnS');
+        btndata.addEventListener('click',function(){
+            inputdata.click()
+        });
+        inputdata.addEventListener('change',function(){
+            if(inputdata.files)
+            {
+
+                submitButton.style.display="block";
+                cdata.innerHTML=inputdata.files[0].name;
+            }
+            else{
+                cdata.innerHTML="Upload a .xlsx or .xls file here .";
+                submitButton.style.display="none";
+            }
+        });
+    </script>
+</body>
+</html>

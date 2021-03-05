@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Upload Excel File</title>
+</head>
+<body>
+    <div class="banner1">
+        <a href="/" style="text-decoration: none; color: black;">
+            <h1>
+                Add from Excel 
+            </h1>
+        </a>
+    </div>
+    <div class="container">
+        <div class="smllbnr">
+            <h1>Add Candidates to database</h1>
+        </div>
+        <div class="inputFileButton" style="display: flex; justify-content: center; align-items: center;flex-direction: column;">
+            <div style="padding: 5px;">
+                <p style="color: rgb(11, 180, 11);">Thank You!</p>
+            </div>
+            <div style="padding: 5px; display: flex; flex-direction: row;">
+                <span id="signTick"></span><p> Successfully Uploaded.</p>
+            </div>
+            <div style="padding: 5px;">
+                <p>Your records will be processed shortly.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var cdata=document.getElementById('cdata');
+        var inputdata=document.getElementById('inputdata');
+        var btndata=document.getElementById('btndata');
+        var submitButton=document.getElementById('btnS');
+        btndata.addEventListener('click',function(){
+            inputdata.click()
+        });
+        inputdata.addEventListener('change',function(){
+            if(inputdata.files)
+            {
+
+                submitButton.style.display="block";
+                cdata.innerHTML=inputdata.files[0].name;
+            }
+            else{
+                cdata.innerHTML="Upload a .xlsx or .xls file here .";
+                submitButton.style.display="none";
+            }
+        });
+    </script>
+</body>
+</html>
