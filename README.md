@@ -1,11 +1,13 @@
 ## Add Excel File
 
-** It is a web application.
-** It is used to add excel data to database.
+* It is a web application.
+* It is used to add excel data to database.
 
 1. To use application: 
-Clone git Repository : 
+* Download node from [node](https://nodejs.org/en/)
 ```shell
+Clone git Repository :
+
 git clone https://github.com/DontknoW-wipe/AddExcelFile.git
 ```
 2. Open command line and install npm modules : 
