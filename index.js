@@ -18,7 +18,8 @@ const port = process.env.PORT || 3000;
 
 
 /* Mongoose Connection */
-var mongoLink= "mongodb://localhost:27017/excelToJson";
+// var mongoLink= "mongodb://localhost:27017/excelToJson";
+var mongoLink="mongodb+srv://xyz1234:jadoo@1234@pastebinapp.dfwfw.mongodb.net/AddExcelData?retryWrites=true&w=majority";
 mongoose.connect(mongoLink, { useNewUrlParser: true , useUnifiedTopology: true }).then(() => console.log('Database Connected!')).catch(err => {
 console.log(err);
 });
