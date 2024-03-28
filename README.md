@@ -15,7 +15,7 @@ git clone https://github.com/DontknoW-wipe/AddExcelFile.git
 npm install express
 npm install express-fileupload
 npm install xlsx
-ipm install mongoose
+npm install mongoose
 ```
 3. To run this application :
 ```shell
